@@ -76,7 +76,7 @@ export default function AboutPage() {
                 </p>
                 <div className="grid grid-cols-3 gap-4 w-full">
                   <div className="text-center p-4 bg-neutral-700 rounded-lg hover:bg-neutral-600 transition-colors duration-300">
-                    <div className="text-2xl font-bold text-white">15+</div>
+                    <div className="text-2xl font-bold text-white">10+</div>
                     <div className="text-sm text-gray-300">Years of Innovation</div>
                   </div>
                   <div className="text-center p-4 bg-neutral-700 rounded-lg hover:bg-neutral-600 transition-colors duration-300">
