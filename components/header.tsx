@@ -23,7 +23,7 @@ export default function Header() {
   const pathname = usePathname()
 
   return (
-    <header className="w-full border-b">
+    <header className="w-full border-b border-neutral-800 bg-neutral-900">
       <Container className="flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
           <Image
@@ -42,7 +42,7 @@ export default function Header() {
               className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                 pathname === href
                   ? 'bg-green-700 text-white'
-                  : 'text-gray-600 hover:text-green-700'
+                  : 'text-gray-300 hover:text-green-500'
               }`}
             >
               {label}
@@ -52,12 +52,19 @@ export default function Header() {
         <div className="flex items-center space-x-4">
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="outline" size="icon">
+              <Button 
+                variant="outline" 
+                size="icon"
+                className="border-neutral-700 text-gray-300 hover:bg-neutral-800"
+              >
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right">
+            <SheetContent 
+              side="right" 
+              className="bg-neutral-900 border-neutral-800"
+            >
               <nav className="flex flex-col space-y-4 mt-4">
                 {navItems.map(({ href, label }) => (
                   <Link
@@ -66,7 +73,7 @@ export default function Header() {
                     className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                       pathname === href
                         ? 'bg-green-700 text-white'
-                        : 'text-gray-600 hover:text-green-700'
+                        : 'text-gray-300 hover:text-green-500'
                     }`}
                   >
                     {label}

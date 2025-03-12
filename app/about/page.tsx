@@ -4,23 +4,61 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Container } from '@/components/container'
 
+const subteams = [
+  {
+    name: "Mechanical Team",
+    description: "The Mechanical Team is in charge of creating a prototype and the physical construction of the robot. They train new members to safely use power tools and handle build equipment to create a practice field to use before competition. They also design components such as drive chains, the chassis, and shooters.",
+    image: "/mech_team.jpeg",
+    accomplishments: [
+      "Robot Design",
+      "Shop Safety",
+      "CAD Expertise",
+      "Field Building"
+    ]
+  },
+  {
+    name: "Electrical Team",
+    description: "The Electrical Team organizes and puts together the electrical board. The electrical board essentially connects the power and the programming to the motors and other parts of the robot so that it may perform all the desired functions!",
+    image: "/elec_team.jpeg",
+    accomplishments: [
+      "Board Design",
+      "Power Systems",
+      "Sensor Control",
+      "Motor Integration"
+    ]
+  },
+  {
+    name: "Programming Team",
+    description: "The Programming Team creates and runs a program in Java that allows students to control the robot. Programming code directs the robot to carry out a specific job within the limits of its hardware but also has to take into account the limits of human ability in order to program AI for competitions.",
+    image: "/prog_team.jpeg",
+    accomplishments: [
+      "Autonomous",
+      "Vision Systems",
+      "Controls",
+      "Data Analysis"
+    ]
+  }
+]
+
 export default function AboutPage() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-neutral-900">
       {/* Hero Banner */}
       <section className="bg-green-700 py-12 text-white">
         <Container>
-          <h1 className="text-4xl font-bold text-center">About us</h1>
-          <p className="text-center mt-2 text-gray-100">Lorem ipsum lorem ipsum</p>
+          <div className="animate-fadeIn">
+            <h1 className="text-4xl font-bold text-center">About us</h1>
+            <p className="text-center mt-2 text-gray-300">Building Tomorrow's Engineers Today</p>
+          </div>
         </Container>
       </section>
 
       {/* Team Overview Section */}
-      <section className="py-16">
+      <section className="py-16 bg-neutral-900">
         <Container>
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="p-6">
-              <CardContent className="space-y-2">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <Card className="p-6 bg-neutral-800 border-neutral-700 hover:bg-neutral-700 transition-colors duration-300">
+              <CardContent className="flex flex-col items-center space-y-6">
                 <div className="flex items-center space-x-4">
                   <Image
                     src="/jps.jpeg"
@@ -29,22 +67,30 @@ export default function AboutPage() {
                     height={60}
                     className="w-15 h-15"
                   />
-                  <h2 className="text-2xl font-bold">JPS ROBOTICS</h2>
+                  <h2 className="text-2xl font-bold text-white">JPS ROBOTICS</h2>
                 </div>
-                <p className="text-gray-600">
+                <p className="text-gray-300 text-center max-w-lg">
                   Team 2554, The Warhawks, is John P. Stevens High School's FIRST
-                  Robotics team. As FIRST participants seek to inspire new generations to
-                  explore the wonders of science and technology.
+                  Robotics team. As FIRST participants, we seek to inspire new generations to
+                  explore the wonders of STEM.
                 </p>
-                <p className="text-gray-600">
-                  Our team is divided into four separate sub-teams: Mechanical, Electrical,
-                  Programming, and Operations. Although each individual group specializes
-                  in their field, all of the sub-teams come together to create a
-                  well-functioning robot for the competition.
-                </p>
+                <div className="grid grid-cols-3 gap-4 w-full">
+                  <div className="text-center p-4 bg-neutral-700 rounded-lg hover:bg-neutral-600 transition-colors duration-300">
+                    <div className="text-2xl font-bold text-white">15+</div>
+                    <div className="text-sm text-gray-300">Years of Innovation</div>
+                  </div>
+                  <div className="text-center p-4 bg-neutral-700 rounded-lg hover:bg-neutral-600 transition-colors duration-300">
+                    <div className="text-2xl font-bold text-white">3</div>
+                    <div className="text-sm text-gray-300">Subteams</div>
+                  </div>
+                  <div className="text-center p-4 bg-neutral-700 rounded-lg hover:bg-neutral-600 transition-colors duration-300">
+                    <div className="text-2xl font-bold text-white">1</div>
+                    <div className="text-sm text-gray-300">Shared Vision</div>
+                  </div>
+                </div>
               </CardContent>
             </Card>
-            <div className="rounded-lg overflow-hidden h-[400px]">
+            <div className="rounded-lg overflow-hidden h-[400px] transform transition-transform duration-300 hover:scale-[1.02]">
               <Image
                 src="/team.jpeg"
                 alt="Team Photo"
@@ -58,103 +104,64 @@ export default function AboutPage() {
       </section>
 
       {/* Subteams Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-neutral-800">
         <Container>
-          <h2 className="text-3xl font-bold text-center mb-2">Subteams</h2>
-          <p className="text-center text-gray-600 mb-12">
-            Team 2554 is split up into several subteams, each with a different purpose
-          </p>
-
-          {/* Mechanical Team */}
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            <div className="order-2 md:order-1 h-[400px]">
-              <Image
-                src="/mech_team.jpeg"
-                alt="Mechanical Team at Work"
-                width={600}
-                height={400}
-                className="rounded-lg w-full h-full object-cover"
-              />
-            </div>
-            <Card className="order-1 md:order-2">
-              <CardHeader>
-                <CardTitle>Mechanical Team</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2">
-                <p className="text-gray-600">
-                  The Mechanical Team is in charge of creating a prototype and the physical
-                  construction of the robot. They train new members to safely use power tools
-                  and handle build equipment to create a practice field to use before competition.
-                  They also design components such as drive chains, the chassis, and shooters.
-                  Students in this sub-team build the skeletal structure of the robot, and 
-                  efficiently arrange the motors, electronics, and various mechanisms onto the robot.
-                </p>
-              </CardContent>
-            </Card>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-white mb-3">Our Subteams</h2>
+            <p className="text-gray-300">
+              Each subteam brings unique expertise to create our competitive edge
+            </p>
           </div>
 
-          {/* Electrical Team */}
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            <Card>
-              <CardHeader>
-                <CardTitle>Electrical Team</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2">
-                <p className="text-gray-600">
-                  The Electrical Team organizes and puts together the electrical board. 
-                  The electrical board essentially connects the power and the programming
-                   to the motors and other parts of the robot so that it may perform all 
-                  the desired functions!
-                </p>
-              </CardContent>
-            </Card>
-            <div className="h-[400px]">
-              <Image
-                src="/elec_team.jpeg"
-                alt="Electrical Team Work"
-                width={600}
-                height={400}
-                className="rounded-lg w-full h-full object-cover"
-              />
+          {subteams.map((team, index) => (
+            <div key={team.name} className="mb-24 last:mb-0">
+              <div className="grid md:grid-cols-2 gap-12">
+                <div className={`order-2 ${index % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}>
+                  <Card className="h-full bg-neutral-900 border-neutral-700 hover:bg-neutral-800 transition-colors duration-300">
+                    <CardHeader className="pb-2">
+                      <CardTitle className="text-2xl text-white">{team.name}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-8">
+                      <p className="text-gray-300 leading-relaxed">{team.description}</p>
+                      <div className="space-y-4">
+                        <h3 className="text-white font-semibold">Key Areas of Focus:</h3>
+                        <div className="grid grid-cols-2 gap-4">
+                          {team.accomplishments.map((accomplishment, i) => (
+                            <span 
+                              key={i} 
+                              className="px-4 py-3 bg-green-700 text-white rounded-lg hover:bg-green-600 transition-colors duration-300 flex items-center justify-center text-center"
+                            >
+                              {accomplishment}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+                <div className={`h-[400px] order-1 ${index % 2 === 0 ? 'md:order-2' : 'md:order-1'}`}>
+                  <div className="transform transition-transform duration-300 hover:scale-[1.02] h-full">
+                    <Image
+                      src={team.image}
+                      alt={`${team.name} at Work`}
+                      width={600}
+                      height={400}
+                      className="rounded-lg w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-
-          {/* Programming Team */}
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="order-2 md:order-1 h-[400px]">
-              <Image
-                src="/prog_team.jpeg"
-                alt="Programming Team at Work"
-                width={600}
-                height={400}
-                className="rounded-lg w-full h-full object-cover"
-              />
-            </div>
-            <Card className="order-1 md:order-2">
-              <CardHeader>
-                <CardTitle>Programming Team</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2">
-                <p className="text-gray-600">
-                  The Programming Team creates and runs a program
-                   in Java that allows students to control the robot.
-                   Programming code directs the robot to carry out a 
-                  specific job within the limits of its hardware but also
-                   has to take into account the limits of human ability in
-                   order to program AI for competitions.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
+          ))}
         </Container>
       </section>
 
       {/* Documentation Section */}
-      <section className="py-16">
+      <section className="py-16 bg-neutral-900">
         <Container>
-          <div className="border-2 border-dashed border-green-700 rounded-lg p-8">
+          <div className="border-2 border-dashed border-yellow-500 rounded-lg p-8 hover:border-yellow-400 transition-colors duration-300">
             <div className="flex flex-col md:flex-row items-center gap-8 justify-center">
-              <div className="w-full md:w-1/3">
+              <div className="w-full md:w-1/3 transform transition-transform duration-300 hover:scale-105">
                 <Image
                   src="/warhawks_logo_ad.png"
                   alt="Team Logo"
@@ -164,8 +171,8 @@ export default function AboutPage() {
                 />
               </div>
               <div className="w-full md:w-2/3 space-y-4 text-center md:text-left">
-                <h2 className="text-2xl font-bold">Want to learn more?</h2>
-                <p className="text-gray-600">
+                <h2 className="text-2xl font-bold text-white">Want to learn more?</h2>
+                <p className="text-gray-300">
                   Click the button below to view our detailed documentation of
                   EVERYTHING you need to know about Team 2554!
                 </p>

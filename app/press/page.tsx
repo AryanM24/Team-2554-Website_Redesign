@@ -44,19 +44,19 @@ const pressArticles = [
 
 export default function PressPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-neutral-900">
       {/* Hero Banner */}
-      <section className="bg-green-700 py-12 text-white">
+      <section className="bg-green-700 py-12">
         <Container>
-          <h1 className="text-4xl font-bold text-center">Press Coverage</h1>
-          <p className="text-center mt-2 text-gray-100">
+          <h1 className="text-4xl font-bold text-center text-white">Press Coverage</h1>
+          <p className="text-center mt-2 text-gray-300">
             lorem ipsum lorem ipsum etc. etc. oh yea
           </p>
         </Container>
       </section>
 
       {/* Press Grid */}
-      <section className="py-16">
+      <section className="py-16 bg-neutral-900">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {pressArticles.map((article, index) => (
@@ -65,7 +65,7 @@ export default function PressPage() {
                 href={article.link}
                 className="block transition-transform hover:-translate-y-1"
               >
-                <Card className="h-full overflow-hidden">
+                <Card className="h-full overflow-hidden bg-neutral-800 border-neutral-700">
                   <div className="aspect-video relative overflow-hidden">
                     <Image
                       src={article.image}
@@ -75,10 +75,10 @@ export default function PressPage() {
                     />
                   </div>
                   <CardContent className="p-6">
-                    <h2 className="text-xl font-semibold mb-2 line-clamp-2">
+                    <h2 className="text-xl font-semibold mb-2 line-clamp-2 text-white">
                       {article.title}
                     </h2>
-                    <p className="text-gray-600">{article.source}</p>
+                    <p className="text-gray-300">{article.source}</p>
                   </CardContent>
                 </Card>
               </Link>
