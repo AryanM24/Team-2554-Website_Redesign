@@ -1,7 +1,4 @@
 {
-  "/sponsors/page": "app/sponsors/page.js",
-  "/page": "app/page.js",
-  "/gallery/page": "app/gallery/page.js",
-  "/executive-board/page": "app/executive-board/page.js",
-  "/about/page": "app/about/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/executive-board/page": "app/executive-board/page.js"
 }

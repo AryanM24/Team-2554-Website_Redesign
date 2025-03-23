@@ -1,4 +1,4 @@
-// File: /workspaces/Team-2554-Website_Redesign/app/sponsors/page.tsx
+// File: C:\Users\abrmo\OneDrive\Documents\2554-website\app\sponsors\page.tsx
 import * as entry from '../../../../app/sponsors/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
