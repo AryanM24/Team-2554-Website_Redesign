@@ -86,7 +86,8 @@ export default function ExecutiveBoardPage() {
                                     className="bg-neutral-800 border-none shadow-md overflow-hidden h-full"
                                  >
                                     <CardContent className="p-0 flex flex-col h-full">
-                                       <div className="aspect-[4/5] w-full relative bg-neutral-700 overflow-hidden">
+                                       {/* Image container with responsive visibility */}
+                                       <div className="aspect-[4/5] w-full relative bg-neutral-700 overflow-hidden hidden sm:block">
                                           <Image
                                              src={
                                                 member.image ||
@@ -97,6 +98,8 @@ export default function ExecutiveBoardPage() {
                                              className="object-cover object-center"
                                           />
                                        </div>
+                                       {/* Mobile placeholder (optional) */}
+                                       <div className="h-4 bg-neutral-700 sm:hidden"></div>
                                        <div className="p-5 text-center flex-grow flex flex-col justify-center">
                                           <h3 className="text-lg font-semibold text-white mb-1">
                                              {member.title}
