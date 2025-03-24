@@ -8,7 +8,7 @@ const subteams = [
   {
     name: "Mechanical Team",
     description: "The Mechanical Team is in charge of creating a prototype and the physical construction of the robot. They train new members to safely use power tools and handle build equipment to create a practice field to use before competition. They also design components such as drive chains, the chassis, and shooters.",
-    image: "/mech_team.jpeg",
+    image: "/about_us_images/mech_image.jpg",
     accomplishments: [
       "Robot Design",
       "Shop Safety",
@@ -19,7 +19,7 @@ const subteams = [
   {
     name: "Electrical Team",
     description: "The Electrical Team organizes and puts together the electrical board. The electrical board essentially connects the power and the programming to the motors and other parts of the robot so that it may perform all the desired functions!",
-    image: "/elec_team.jpeg",
+    image: "/about_us_images/elec_image.jpg",
     accomplishments: [
       "Board Design",
       "Power Systems",
@@ -30,7 +30,7 @@ const subteams = [
   {
     name: "Programming Team",
     description: "The Programming Team creates and runs a program in Java that allows students to control the robot. Programming code directs the robot to carry out a specific job within the limits of its hardware but also has to take into account the limits of human ability in order to program AI for competitions.",
-    image: "/prog_team.jpeg",
+    image: "/about_us_images/prog_image_3.jpg",
     accomplishments: [
       "Autonomous",
       "Vision Systems",
@@ -57,7 +57,7 @@ export default function AboutPage() {
       <section className="py-16 bg-neutral-900">
         <Container>
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            <Card className="p-6 bg-neutral-800 border-neutral-700 hover:bg-neutral-700 transition-colors duration-300">
+            <Card className="p-6 bg-neutral-800 border-neutral-700 ">
               <CardContent className="flex flex-col items-center space-y-6">
                 <div className="flex items-center space-x-4">
                   <Image
@@ -80,7 +80,7 @@ export default function AboutPage() {
                     <div className="text-sm text-gray-300">Years of Innovation</div>
                   </div>
                   <div className="text-center p-4 bg-neutral-700 rounded-lg hover:bg-neutral-600 transition-colors duration-300">
-                    <div className="text-2xl font-bold text-white">3</div>
+                    <div className="text-2xl font-bold text-white">4</div>
                     <div className="text-sm text-gray-300">Subteams</div>
                   </div>
                   <div className="text-center p-4 bg-neutral-700 rounded-lg hover:bg-neutral-600 transition-colors duration-300">
@@ -92,9 +92,9 @@ export default function AboutPage() {
             </Card>
             <div className="rounded-lg overflow-hidden h-[400px] transform transition-transform duration-300 hover:scale-[1.02]">
               <Image
-                src="/team.jpeg"
+                src="/about_us_images/about_us_front.jpg"
                 alt="Team Photo"
-                width={600}
+                width={500}
                 height={400}
                 className="w-full h-full object-cover"
               />
@@ -114,10 +114,10 @@ export default function AboutPage() {
           </div>
 
           {subteams.map((team, index) => (
-            <div key={team.name} className="mb-24 last:mb-0">
+            <div key={team.name} className="mb-12 last:mb-0">
               <div className="grid md:grid-cols-2 gap-12">
                 <div className={`order-2 ${index % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}>
-                  <Card className="h-full bg-neutral-900 border-neutral-700 hover:bg-neutral-800 transition-colors duration-300">
+                  <Card className="h-full bg-neutral-900 border-neutral-700">
                     <CardHeader className="pb-2">
                       <CardTitle className="text-2xl text-white">{team.name}</CardTitle>
                     </CardHeader>
