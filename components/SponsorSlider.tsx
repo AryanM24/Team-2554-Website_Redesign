@@ -6,15 +6,7 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import '../styles/sponsor-slider.css'
-
-const sponsors = [
-  { name: 'Sponsor 1', image: '/placeholder.svg' },
-  { name: 'Sponsor 2', image: '/placeholder.svg' },
-  { name: 'Sponsor 3', image: '/placeholder.svg' },
-  { name: 'Sponsor 4', image: '/placeholder.svg' },
-  { name: 'Sponsor 5', image: '/placeholder.svg' },
-  { name: 'Sponsor 6', image: '/placeholder.svg' },
-]
+import { sponsors } from '@/lib/sponsors'
 
 export default function SponsorSlider() {
   const settings = {
@@ -50,7 +42,7 @@ export default function SponsorSlider() {
         <div key={index} className="px-2">
           <div className="bg-white p-4 rounded-lg shadow">
             <Image
-              src={sponsor.image}
+              src={sponsor.logo}
               alt={sponsor.name}
               width={300}
               height={200}

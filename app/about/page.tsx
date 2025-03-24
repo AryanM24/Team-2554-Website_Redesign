@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Container } from '@/components/container';
+import Link from 'next/link';
 
 const subteams = [
    {
@@ -61,29 +62,32 @@ export default function AboutPage() {
          {/* Team Overview Section */}
          <section className="py-16 bg-neutral-900 hidden sm:block">
             <Container>
-               <div className="grid md:grid-cols-2 gap-8 items-center">
-                  <Card className="p-6 bg-neutral-800 border-neutral-700 hidden sm:block">
-                     <CardContent className="flex flex-col items-center space-y-6">
-                        <div className="flex items-center space-x-4">
-                           <Image
-                              src="/jps.jpeg"
-                              alt="JPS Robotics Logo"
-                              width={60}
-                              height={60}
-                              className="w-15 h-15"
-                           />
-                           <h2 className="text-2xl font-bold text-white">
-                              JPS ROBOTICS
-                           </h2>
+               <div className="grid md:grid-cols-2 gap-8 items-stretch">
+                  <Card className="bg-neutral-800 border-neutral-700 overflow-hidden h-full">
+                     <CardContent className="flex flex-col justify-between h-full p-8">
+                        <div className="flex flex-col items-center space-y-8">
+                           <div className="flex items-center space-x-4">
+                              <div className="relative w-16 h-16 overflow-hidden rounded-full bg-neutral-700">
+                                 <Image
+                                    src="/jps.jpeg"
+                                    alt="JPS Robotics Logo"
+                                    fill
+                                    className="object-cover"
+                                 />
+                              </div>
+                              <h2 className="text-2xl font-bold text-white">
+                                 JPS ROBOTICS
+                              </h2>
+                           </div>
+                           <p className="text-gray-300 text-center max-w-lg">
+                              Team 2554, The Warhawks, is John P. Stevens High
+                              School's FIRST Robotics team. As FIRST
+                              participants, we seek to inspire new generations
+                              to explore the wonders of STEM.
+                           </p>
                         </div>
-                        <p className="text-gray-300 text-center max-w-lg">
-                           Team 2554, The Warhawks, is John P. Stevens High
-                           School's FIRST Robotics team. As FIRST participants,
-                           we seek to inspire new generations to explore the
-                           wonders of STEM.
-                        </p>
-                        <div className="grid grid-cols-3 gap-4 w-full">
-                           <div className="text-center p-4 bg-neutral-700 rounded-lg hover:bg-neutral-600 transition-colors duration-300">
+                        <div className="grid grid-cols-3 gap-4 w-full mt-8">
+                           <div className="text-center p-4 bg-neutral-700 rounded-lg hover:bg-neutral-600 transition-colors duration-300 transform hover:scale-105">
                               <div className="text-2xl font-bold text-white">
                                  10+
                               </div>
@@ -91,7 +95,7 @@ export default function AboutPage() {
                                  Years of Innovation
                               </div>
                            </div>
-                           <div className="text-center p-4 bg-neutral-700 rounded-lg hover:bg-neutral-600 transition-colors duration-300">
+                           <div className="text-center p-4 bg-neutral-700 rounded-lg hover:bg-neutral-600 transition-colors duration-300 transform hover:scale-105">
                               <div className="text-2xl font-bold text-white">
                                  4
                               </div>
@@ -99,7 +103,7 @@ export default function AboutPage() {
                                  Subteams
                               </div>
                            </div>
-                           <div className="text-center p-4 bg-neutral-700 rounded-lg hover:bg-neutral-600 transition-colors duration-300">
+                           <div className="text-center p-4 bg-neutral-700 rounded-lg hover:bg-neutral-600 transition-colors duration-300 transform hover:scale-105">
                               <div className="text-2xl font-bold text-white">
                                  1
                               </div>
@@ -110,15 +114,15 @@ export default function AboutPage() {
                         </div>
                      </CardContent>
                   </Card>
-                  <div className="rounded-lg overflow-hidden h-[400px] sm:h-[200px] transform transition-transform duration-300 hover:scale-[1.02]">
-                     <Image
-                        src="/about_us_images/about_us_front.jpg"
-                        alt="Team Photo"
-                        width={500}
-                        height={400}
-                        className="w-full max-w-xs mx-auto object-cover rounded-lg xs:max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl"
-                        priority
-                     />
+                  <div className="rounded-lg overflow-hidden h-full shadow-lg shadow-neutral-950/20 transform transition-transform duration-300 hover:scale-[1.02]">
+                     <div className="relative w-full h-full">
+                        <Image
+                           src="/about_us_images/about_us_front.jpg"
+                           alt="Team Photo"
+                           fill
+                           className="object-cover"
+                        />
+                     </div>
                   </div>
                </div>
             </Container>
@@ -219,9 +223,11 @@ export default function AboutPage() {
                            documentation of EVERYTHING you need to know about
                            Team 2554!
                         </p>
-                        <Button className="bg-green-700 hover:bg-green-800">
-                           Team 2554 Official Documentation
-                        </Button>
+                        <Link href="https://docs.jpsrobotics2554.org/">
+                           <Button className="bg-green-700 hover:bg-green-800 mt-5">
+                              Team 2554 Official Documentation
+                           </Button>
+                        </Link>
                      </div>
                   </div>
                </div>
