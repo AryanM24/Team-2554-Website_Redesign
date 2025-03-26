@@ -32,30 +32,23 @@ export default function Footer() {
                 className="h-10 w-auto"
             />
             <p className="text-sm text-gray-300">
-              © TEAM 2554 WARHAWKS FRC. All Rights Reserved.
             </p>
           </div>
           <p className="text-sm text-gray-300 text-center md:text-left">
-            made with ❤️ by the operations programming team
+            made with ❤️ by the operations programming team :)
           </p>
           <div className="flex space-x-4">
             <Link 
-              href="#" 
+              href="https://www.youtube.com/@WarhawksTeam2554" 
               className="text-gray-300 hover:text-green-500 transition-colors duration-200"
             >
               <Youtube className="h-5 w-5" />
             </Link>
             <Link 
-              href="#" 
+              href="https://www.instagram.com/jpsrobotics2554/" 
               className="text-gray-300 hover:text-green-500 transition-colors duration-200"
             >
               <Instagram className="h-5 w-5" />
-            </Link>
-            <Link 
-              href="#" 
-              className="text-gray-300 hover:text-green-500 transition-colors duration-200"
-            >
-              <TikTokIcon className="h-5 w-5" />
             </Link>
           </div>
         </div>
