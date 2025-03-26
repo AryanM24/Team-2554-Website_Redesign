@@ -50,7 +50,7 @@ export default function ExecutiveBoardPage() {
          </section>
 
          {/* Subteam Captains Section */}
-         <section className="py-16 bg-black">
+         <section className="py-16 bg-neutral-800">
             <Container>
                <div className="max-w-4xl mx-auto space-y-12">
                   {subteams.map((subteam, index) => {
@@ -83,7 +83,7 @@ export default function ExecutiveBoardPage() {
                               {subteam.members.map((member, idx) => (
                                  <Card
                                     key={idx}
-                                    className="bg-neutral-800 border-none shadow-md overflow-hidden h-full"
+                                    className="bg-neutral-900 border-none shadow-md overflow-hidden h-full"
                                  >
                                     <CardContent className="p-0 flex flex-col h-full">
                                        {/* Image container with responsive visibility */}
