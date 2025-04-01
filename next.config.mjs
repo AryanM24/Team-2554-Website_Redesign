@@ -7,15 +7,16 @@ try {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
+output: 'export',
+eslint: {
     ignoreDuringBuilds: true,
-  },
-  typescript: {
+},
+typescript: {
     ignoreBuildErrors: true,
-  },
-  images: {
+},
+images: {
     unoptimized: true,
-  },
+},
   experimental: {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,
