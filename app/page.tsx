@@ -73,7 +73,7 @@ export default function Home() {
                               Every year, high school students have 6 weeks to
                               design and build a robot that can accomplish FRC's
                               challenge and compete with teams from across the
-                              nation. The 2023 theme is Rapid React. Through the
+                              nation. The 2025 theme is REEFSCAPE. Through the
                               guidance and leadership of our captains and
                               mentors, students are able to acquire the
                               knowledge necessary for and develop a powerful

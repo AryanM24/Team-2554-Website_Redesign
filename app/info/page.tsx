@@ -13,7 +13,7 @@ const infoCards = [
     imageUrl: "https://www.firstinspires.org/sites/default/files/open-graph-first-logo.png",
     imageAlt: "FIRST Robotics Logo",
     buttonText: "FIRST ROBOTICS",
-    buttonLink: "#",
+    buttonLink: "https://www.firstinspires.org/robotics/frc",
     containerClass: "bg-neutral-900",
     type: "image"
   },
@@ -22,26 +22,16 @@ const infoCards = [
     description: "To see our past performance and keep up to date, check out our Blue Alliance page.",
     icon: TestTube,
     buttonText: "BLUE ALLIANCE PAGE",
-    buttonLink: "#",
+    buttonLink: "https://www.thebluealliance.com/team/2554",
     containerClass: "bg-[#3b5998]",
     type: "icon"
-  },
-  {
-    title: "Team Merch",
-    description: "Buy our merch!",
-    imageUrl: "/warhawks_logo_ad.png",
-    imageAlt: "Team 2554 Logo",
-    buttonText: "TEAM 2554 MERCH STORE",
-    buttonLink: "#",
-    containerClass: "bg-black",
-    type: "image"
   },
   {
     title: "Documentation",
     description: "To see information on how our subteams work, check out our documentation.",
     icon: FileText,
     buttonText: "DOCUMENTATION",
-    buttonLink: "#",
+    buttonLink: "https://docs.jpsrobotics2554.org/",
     containerClass: "bg-neutral-900",
     type: "icon"
   }
