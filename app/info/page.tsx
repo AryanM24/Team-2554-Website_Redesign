@@ -55,7 +55,7 @@ export default function InfoPage() {
         <Container>
           <h1 className="text-4xl font-bold text-center text-white">Information and Updates</h1>
           <p className="text-center mt-2 text-gray-300">
-            lorem ipsum lorem ipsum etc. etc. oh yea
+            You can look at our documentation below to view more information about what each subteam does!
           </p>
         </Container>
       </section>
