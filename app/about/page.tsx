@@ -7,6 +7,18 @@ import Link from 'next/link';
 
 const subteams = [
    {
+      name: 'Operations Team',
+      description: 
+         'The operations subteam is the latest addition to our team with the most important role: funding. The Operations team is tasked with finding crucial funding through sponsors and grants, allowing the build teams to work without constraints. The photography team on Operations were responsible for all these pictures!',
+      image: '/about_us_images/operations_image.jpg',
+      accomplishments: [
+         'Impact Award',
+         'Grant Writing',
+         'Photography',
+         'Outreach'
+      ]
+   },
+   {
       name: 'Mechanical Team',
       description:
          'The Mechanical Team is in charge of creating a prototype and the physical construction of the robot. They train new members to safely use power tools and handle build equipment to create a practice field to use before competition. They also design components such as drive chains, the chassis, and shooters.',
@@ -21,13 +33,13 @@ const subteams = [
    {
       name: 'Electrical Team',
       description:
-         'The Electrical Team organizes and puts together the electrical board. The electrical board essentially connects the power and the programming to the motors and other parts of the robot so that it may perform all the desired functions!',
+         'The Electrical Team organizes and puts together the electrical board. The electrical board essentially connects the power and the programming to the motors and other parts of the robot so that it may perform all the desired functions! Memembers from the electrical team also assist in field setup and robot Cad.',
       image: '/about_us_images/elec_image.jpg',
       accomplishments: [
          'Board Design',
          'Power Systems',
          'Sensor Control',
-         'Motor Integration',
+         'Motor Integration'
       ],
    },
    {
@@ -39,9 +51,21 @@ const subteams = [
          'Autonomous',
          'Vision Systems',
          'Controls',
-         'Data Analysis',
+         'Data Analysis'
       ],
    },
+   {
+      name: 'Operations Programming',
+      description: 
+         'Operations Programming develops software tools to support the Build team, manages the team website, and processes data. Unlike the Build Programming Subteam, which focuses on Java-based robot code using WPI Lib, Operations Programming primarily works with JavaScript frameworks like Svelte, React, and Google Apps Script.',
+      image: '/about_us_images/ops_prog_image.jpg',
+      accomplishments: [
+         'Team Website',
+         'Pit/Match Scouting',
+         'Inv. Management Systems',
+         'Merch Automation'
+      ]
+   }
 ];
 
 export default function AboutPage() {
@@ -131,7 +155,7 @@ export default function AboutPage() {
          {/* Subteams Section */}
          <section className="py-16 bg-neutral-800">
             <Container>
-               <div className="text-center mb-16">
+               <div className="text-center mb-8">
                   <h2 className="text-3xl font-bold text-white mb-3">
                      Our Subteams
                   </h2>
@@ -142,8 +166,8 @@ export default function AboutPage() {
                </div>
 
                {subteams.map((team, index) => (
-                  <div key={team.name} className="mb-12 last:mb-0">
-                     <div className="grid md:grid-cols-2 gap-12">
+                  <div key={team.name} className="mb-5 last:mb-0">
+                     <div className="grid md:grid-cols-2 gap-8">
                         <div
                            className={`order-2 ${
                               index % 2 === 0 ? 'md:order-1' : 'md:order-2'

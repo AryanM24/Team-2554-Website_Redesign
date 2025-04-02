@@ -15,7 +15,7 @@ const navItems = [
   { href: '/executive-board', label: 'Executive Board' },
   { href: '/sponsors', label: 'Sponsors' },
   { href: '/gallery', label: 'Gallery' },
-  { href: '/press', label: 'Press' },
+  { href: '/outreach', label: 'Outreach' },
   { href: '/info', label: 'Info' },
 ]
 
