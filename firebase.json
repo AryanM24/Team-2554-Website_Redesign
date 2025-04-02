@@ -8,9 +8,14 @@
     ],
     "rewrites": [
       {
-        "source": "**",
+        "source": "**/*.@(jpg|jpeg|gif|png|webp|svg)",
         "destination": "/index.html"
       }
-    ]
+    ],
+    "functions": {
+      "runtime": "nodejs18",
+      "memory": "512MB",
+      "timeoutSeconds": 60
+    }
   }
 }
