@@ -1,3 +1,5 @@
+// note: not using descriptions anymore
+
 export const presidents = [
     {
        title: 'Build President',
@@ -65,7 +67,7 @@ export const subteams = [
           {
              title: 'Mech Captain',
              image: '/exec_images/maddy_image.jpg',
-             name: 'placeholder'
+             name: 'Medhansh Gada'
           },
           {
              title: 'Safety Captain',
