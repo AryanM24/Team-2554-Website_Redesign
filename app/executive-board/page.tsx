@@ -56,6 +56,7 @@ export default function ExecutiveBoardPage() {
          <section className="py-12 bg-neutral-800 flex justify-center items-center">
             <div className="container px-4 mx-auto">
             <Tabs defaultValue={subteams[0].subteamName} className="flex flex-col items-center">
+
                {/* mobile tabs */}
                <TabsList className="flex justify-center gap-0 w-full max-w-md md:hidden overflow-x-auto pb-1">
                   {subteams.map((subteam, index) => (
@@ -70,7 +71,7 @@ export default function ExecutiveBoardPage() {
                </TabsList>
 
                {/* desktop tabs */}
-               <TabsList className="hidden md:flex justify-center mb-6 gap-0 flex-wrap">
+               <TabsList className="hidden md:flex justify-center mb-6 gap-0 flex-wrap font-bold">
                   {subteams.map((subteam, index) => (
                   <TabsTrigger
                      key={`desktop-${index}`}
