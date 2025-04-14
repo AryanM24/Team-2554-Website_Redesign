@@ -19,7 +19,7 @@ export const presidents = [
 export const subteams = [
     {
        subteamName: 'Programming',
-       description: 'The programming subteam deals with programming the robot',
+       description: 'The Programming Team creates and runs a program in Java that allows students to control the robot. Programming code directs the robot to carry out a specific job within the limits of its hardware but also has to take into account the limits of human ability in order to program AI for competitions.',
        members: [
           {
              title: 'Programming Captain',
@@ -45,7 +45,7 @@ export const subteams = [
     },
     {
        subteamName: 'Mechanical',
-       description: 'The Mech subteam helps build the robot',
+       description: 'The Mech subteam helps build the robot, the field elements, and CADS to prepare for the season',
        members: [
           {
              title: 'Mech Captain',
@@ -63,6 +63,11 @@ export const subteams = [
              name: 'Jahnavi Singh',
           },
           {
+             title: 'Mech Captain',
+             image: '/exec_images/maddy_image.jpg',
+             name: 'placeholder'
+          },
+          {
              title: 'Safety Captain',
              image: '/exec_images/shastha_image.png',
              name: 'Shastha Venkatesh',
@@ -71,7 +76,7 @@ export const subteams = [
     },
     {
        subteamName: 'Electrical',
-       description: 'The electrical subteam is responsible for wiring the robot',
+       description: 'The electrical subteam is responsible for wiring the robot, its controller, and helps the Mech team with field assembly',
        members: [
           {
              title: 'Electrical Captain',
