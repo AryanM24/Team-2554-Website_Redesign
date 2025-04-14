@@ -1,4 +1,4 @@
-// File: /Users/abirmodak/Documents/2554-website/app/gallery/page.tsx
+// File: /Users/abirmodak/Documents/nodeProjects/2554website/app/gallery/page.tsx
 import * as entry from '../../../../app/gallery/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

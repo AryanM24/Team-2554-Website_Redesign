@@ -1,4 +1,4 @@
-// File: /Users/abirmodak/Documents/2554-website/app/outreach/page.tsx
+// File: /Users/abirmodak/Documents/nodeProjects/2554website/app/outreach/page.tsx
 import * as entry from '../../../../app/outreach/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
