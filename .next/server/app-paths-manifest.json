@@ -1,4 +1,7 @@
 {
   "/page": "app/page.js",
-  "/executive-board/page": "app/executive-board/page.js"
+  "/about/page": "app/about/page.js",
+  "/executive-board/page": "app/executive-board/page.js",
+  "/gallery/page": "app/gallery/page.js",
+  "/outreach/page": "app/outreach/page.js"
 }
