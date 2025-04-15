@@ -94,7 +94,7 @@ export default function ExecutiveBoardPage() {
                   } else if (memberCount === 3) {
                      gridClass += "grid-cols-1 sm:grid-cols-3 max-w-3xl mx-auto gap-8"
                   } else if (memberCount == 5) {
-                     gridClass += "grid-cols-5 max-w-8x gap-2"
+                     gridClass += "grid-cols-1 max-w-8x gap-2 md:grid-cols-5 lg:grid-cols-5 mx-auto"
                   }
                   else {
                      gridClass += "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  mx-auto gap-8"
