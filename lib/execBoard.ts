@@ -3,17 +3,17 @@
 export const presidents = [
     {
        title: 'Build President',
-       names: 'Aditya Saini',
+       name: 'Aditya Saini',
        image: '/exec_images/saini_image.png',
     },
     {
        title: 'Build President',
-       names: 'Adi Chawathe',
+       name: 'Adi Chawathe',
        image: '/exec_images/adi_image.png',
     },
     {
        title: 'Administrative President',
-       names: 'Anumeha Haldar',
+       name: 'Anumeha Haldar',
        image: '/exec_images/anumeha_image.png',
     },
  ];

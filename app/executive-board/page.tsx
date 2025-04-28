@@ -25,7 +25,8 @@ export default function ExecutiveBoardPage() {
          {/* Leadership Section */}
          <section className="py-16 bg-neutral-900">
             <Container>
-               <div className="grid md:grid-cols-3 gap-8">
+               {/* desktop view */}
+               <div className="md:grid-cols-3 gap-8 hidden md:grid">
                   {presidents.map((president, index) => (
                      <Card
                         key={index}
@@ -43,10 +44,29 @@ export default function ExecutiveBoardPage() {
                               <h2 className="text-xl font-semibold text-white">
                                  {president.title}
                               </h2>
-                              <p className="text-gray-300">{president.names}</p>
+                              <p className="text-gray-300">{president.name}</p>
                            </div>
                         </CardContent>
                      </Card>
+                  ))}
+               </div>
+
+               {/* mobile view */}
+               <div className='grid gap-8 block md:hidden'>
+                  {presidents.map((president, index) => (
+                        <Card
+                           key={index}
+                           className="bg-neutral-800 border border-neutral-600 shadow-lg overflow-hidden h-full"
+                        >
+                           <CardContent className="p-0 flex flex-col h-full">
+                              {/* mobile cards */}
+                              <div className="h-4 bg-neutral-600 sm:hidden"></div>
+                              <div className="p-5 text-center flex-grow flex flex-col justify-center items-center">
+                                 <h3 className="text-lg font-semibold text-white mb-1">{president.title}</h3>
+                                 <p className="text-gray-400">{president.name}</p>
+                              </div>
+                           </CardContent>
+                        </Card>
                   ))}
                </div>
             </Container>
