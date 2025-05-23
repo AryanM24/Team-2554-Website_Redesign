@@ -5,10 +5,21 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Container } from '@/components/container';
 import SponsorSlider from '@/components/SponsorSlider';
+import HackJPSEventPopup from '@/components/HackJPSEventPopup';
+
 
 export default function Home() {
    return (
       <div className="flex flex-col min-h-screen bg-neutral-900">
+
+         {/* Event Popup - Add this component here */}
+         <HackJPSEventPopup
+            eventName="HackJPS '25"
+            eventDate="June 10, 2025"
+            eventPageUrl="https://hackjps.org/"
+            eventDescription="Join us for HackJPS 2025! Innovate, create, and compete. Sign ups open soon!"
+         />
+
          {/* Hero Section */}
          <section className="py-20 text-center bg-neutral-900">
             <Container>
