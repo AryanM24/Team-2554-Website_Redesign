@@ -59,7 +59,7 @@ const HackJPSEventPopup: React.FC<HackJPSEventPopupProps> = ({
   return (
     <div
       ref={popupRef}
-      className={`fixed bottom-5 right-5 sm:bottom-8 sm:right-8 z-50 p-6 rounded-xl shadow-2xl bg-neutral-800 border border-neutral-700 w-full max-w-md text-white
+      className={`fixed bottom-0 right-0 sm:bottom-8 sm:right-8 z-50 p-4 sm:p-6 rounded-none sm:rounded-xl shadow-2xl bg-neutral-800 border border-neutral-700 w-full sm:max-w-md text-white
                   transition-opacity duration-500 ease-out ${isMounted ? "opacity-100" : "opacity-0"}`}
       role="alertdialog"
       aria-labelledby="hackjps-event-popup-title"
@@ -68,32 +68,32 @@ const HackJPSEventPopup: React.FC<HackJPSEventPopupProps> = ({
     >
       <button
         onClick={handleClose}
-        className="absolute top-3 right-3 p-1 rounded-full text-gray-400 hover:bg-neutral-700 transition-colors"
+        className="absolute top-2 right-2 sm:top-3 sm:right-3 p-1 rounded-full text-gray-400 hover:bg-neutral-700 transition-colors"
         aria-label="Close event notification"
       >
-        <X size={20} /> {/* Lucide X icon */}
+        <X size={20} />
       </button>
 
-      <div className="flex items-start space-x-4">
-        <div className="flex-shrink-0 mt-1">
-          <MonitorPlay size={36} className="text-green-500" /> {/* Lucide MonitorPlay icon */}
+      <div className="flex items-start space-x-3 sm:space-x-4">
+        <div className="flex-shrink-0">
+          <MonitorPlay size={28} sm={36} className="text-green-500" />
         </div>
-        <div>
-          <h2 id="hackjps-event-popup-title" className="text-xl font-semibold mb-1 text-white">
+        <div className="flex-1 min-w-0">
+          <h2 id="hackjps-event-popup-title" className="text-lg sm:text-xl font-semibold mb-1 text-white truncate">
             {eventName}
           </h2>
-          <div className="flex items-center text-sm text-gray-400 mb-3">
-            <CalendarDays size={16} className="mr-2" /> {/* Lucide CalendarDays icon */}
+          <div className="flex items-center text-xs sm:text-sm text-gray-400 mb-2 sm:mb-3">
+            <CalendarDays size={14} className="mr-1 sm:mr-2" />
             <span>{eventDate}</span>
           </div>
-          <p id="hackjps-event-popup-description" className="text-sm text-gray-300 mb-5">
+          <p id="hackjps-event-popup-description" className="text-xs sm:text-sm text-gray-300 mb-4 sm:mb-5">
             {eventDescription}
           </p>
           <div className="flex flex-col sm:flex-row sm:space-x-3 space-y-2 sm:space-y-0">
             <Link href={eventPageUrl} passHref legacyBehavior>
               <Button
                 onClick={handleRedirect}
-                className="w-full sm:w-auto bg-green-700 hover:bg-green-600 text-white"
+                className="w-full sm:w-auto bg-green-700 hover:bg-green-600 text-white text-sm py-2 h-auto"
               >
                 Learn More & Sign Up
               </Button>
@@ -101,7 +101,7 @@ const HackJPSEventPopup: React.FC<HackJPSEventPopupProps> = ({
             <Button
               variant="outline"
               onClick={handleClose}
-              className="w-full sm:w-auto text-gray-300 border-neutral-600 hover:bg-neutral-700 hover:text-white"
+              className="w-full sm:w-auto text-gray-300 border-neutral-600 hover:bg-neutral-700 hover:text-white text-sm py-2 h-auto"
             >
               Dismiss
             </Button>
